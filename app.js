@@ -48,19 +48,16 @@ const flowDiscord = addKeyword(['discord']).addAnswer(
     [flowSecundario]
 )
 
-const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
-    .addAnswer('🙌 Hola bienvenido a este *Chatbot*')
-    .addAnswer(
-        [
-            'te comparto los siguientes links de interes sobre el proyecto',
-            '👉 *doc* para ver la documentación',
-            '👉 *gracias*  para ver la lista de videos',
-            '👉 *discord* unirte al discord',
-        ],
-        null,
-        null,
-        [flowDocs, flowGracias, flowTuto, flowDiscord]
-    )
+const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina'])
+    .addAnswer('Bien venido!! soy el coach virtual  ...')
+    .addAnswer([
+        'Que vamos a hacer el dia de hoy?',
+        '\n',
+        'Pecho',
+        'Espalda',
+        
+        ])
+    
 
 const main = async () => {
     const adapterDB = new MockAdapter()
