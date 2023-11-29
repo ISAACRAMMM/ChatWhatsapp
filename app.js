@@ -49,13 +49,16 @@ const flowDiscord = addKeyword(['discord']).addAnswer(
 )
 
 const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina'])
-    .addAnswer('Bien venido!! soy el coach virtual  ...')
+    .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
     .addAnswer([
         'Que vamos a hacer el dia de hoy?',
-        '\n',
-        'Pecho',
-        'Espalda',
-        
+        '[Pecho]',
+        '[Espalda]',
+        '[Pierna]',
+        '[Gluteo]',
+        '[Brazo]',
+        '[Abdomen]',
+
         ])
     
 
