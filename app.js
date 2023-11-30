@@ -11,7 +11,7 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 
 
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
-    .addAnswer({media: './images/img simulacion.png'})
+    .addAnswer({media: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.salter.es%2Fsalter-challenge-dia-5-ejercicios-de-piernas%2F&psig=AOvVaw0eVBWUrEwk2DcKYsmBet6h&ust=1701397272742000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLjO2fLU6oIDFQAAAAAdAAAAABAE'})
 
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
 
