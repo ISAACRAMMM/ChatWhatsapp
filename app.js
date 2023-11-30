@@ -198,7 +198,7 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal,flowAbdomen,flowBiceps,flowEspalda,flowGluteo,flowPecho,flowPierna,flowTriceps])
+    const adapterFlow = createFlow([flowPrincipal])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
