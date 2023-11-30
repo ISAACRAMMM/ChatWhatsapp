@@ -41,19 +41,16 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
 //
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
     .addAnswer('Esta es tu rutina de pecho')
-    .addAnswer('',
-        {media: './images/pecho/press-de-banca.png'}
+    .addAnswer('Vas a empezar con press de pecho en maquina realiza 4 series de 10 repeticiones ',
+        {media: './images/pecho/press-maquina.png'}
         )
-    .addAnswer('',
+    .addAnswer('Cuando finalices continua con press de pecho en banco ( _ajusta la altura al tercer punto partiendo de plano_ ) realiza 4 series de 8 a 12 repeticiones ',
         {media: './images/pecho/Press-de-banca-inclinado.png'}
         )
-    .addAnswer('',
-        {media: './images/pecho/Press-de-banca-inclinado.png'}
-        )
-    .addAnswer('',
+    .addAnswer('Después te vas a dirigir a la máquina de peck  para realizar aperturas realiza 3 series de 20 repeticiones con un peso bajo',
         {media: './images/pecho/peck.png'}
         )
-    .addAnswer('',
+    .addAnswer('Vamos a terminar pecho realizando fondos en la máquina,  haz 4 series de 12 repeticiones con el agarre cerrado',
         {media: './images/pecho/fondos.png'}
         )
 ///
@@ -61,7 +58,7 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
 //
 const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espalda'])
     .addAnswer('Aquí tienes tu rutina de espalda')
-    .addAnswer('',
+    .addAnswer('Empieza con jalón a la cara con la barra larga, en aun agarre abierto realiza 4 series de 12 repeticiones',
         {media: './images/espalda/jalon-cerrado.png'}
         )
     .addAnswer('',
@@ -134,16 +131,31 @@ const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de
 const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios de abdomen'])
     .addAnswer('Aquí tienes tu rutina de abdomen')
     .addAnswer('',
-        {media: ''}
+        {media: './images/abdomen/abs.png'}
+        )
+        .addAnswer('',
+        {media: './images/abdomen/elevacion-de-piernas.png'}
+        )
+        .addAnswer('',
+        {media: './images/abdomen/plancha-lateral.png'}
         )
 ///
 //      -hombro
 //
     const flowHombro=addKeyword(['ombro', 'hombro', 'honbro','rutina de hombro','ejercicios de hombro'])
-    .addAnswer('Aquí tienes tu rutina de abdomen')
+    .addAnswer('Aquí tienes tu rutina de hombro ')
     .addAnswer('',
-        {media: ''}
+        {media: './images/hombro/press-hombro.png'}
         )
+    .addAnswer('',
+        {media: './images/hombro/press-de-hombros-con-mancuernas.png'}
+        )
+    .addAnswer('',
+        {media: './images/hombro/laterales.png'}
+        )
+    .addAnswer('',
+        {media: './images/hombro/elevacion-frontal.png'}
+        )        
 
 ///
 //      -
