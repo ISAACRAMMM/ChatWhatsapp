@@ -42,19 +42,19 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
     .addAnswer('Esta es tu rutina de pecho')
     .addAnswer('',
-        {media: ''}
+        {media: './images/pecho/press-de-banca.png'}
         )
     .addAnswer('',
-        {media: ''}
+        {media: './images/pecho/Press-de-banca-inclinado.png'}
         )
     .addAnswer('',
-        {media: ''}
+        {media: './images/pecho/Press-de-banca-inclinado.png'}
         )
     .addAnswer('',
-        {media: ''}
+        {media: './images/pecho/peck.png'}
         )
     .addAnswer('',
-        {media: ''}
+        {media: './images/pecho/fondos.png'}
         )
 ///
 //      -espalda
@@ -62,7 +62,16 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
 const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espalda'])
     .addAnswer('Aquí tienes tu rutina de espalda')
     .addAnswer('',
-        {media: ''}
+        {media: './images/espalda/jalon-cerrado.png'}
+        )
+    .addAnswer('',
+        {media: './images/espalda/remo-polea.png'}
+        )
+    .addAnswer('',
+        {media: './images/espalda/aperturas-invertida.png'}
+        )
+    .addAnswer('',
+        {media: './images/espalda/remo-horizontal.png'}
         )
 ///
 //      -gluteo
@@ -70,7 +79,19 @@ const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espal
 const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo','pompa','culo','nalgas'])
     .addAnswer('Aquí tienes tu rutina de gluteo')
     .addAnswer('',
-        {media: ''}
+        {media: './images/gluteo/sumo-peso.jpeg'}
+        )
+    .addAnswer('',
+        {media: './images/gluteo/desplantes.png'}
+        )
+    .addAnswer('',
+        {media: './images/gluteo'}
+        )
+    .addAnswer('',
+        {media: './images/gluteo/hiptrus.jpeg'}
+        )
+    .addAnswer('',
+        {media: './images/gluteo/patada-polea.png'}
         )
 ///
 //      -triceps
@@ -78,6 +99,15 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
 const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios de triceps','rutina de triceps'])
     .addAnswer('Aquí tienes tu rutina de triceps')
     .addAnswer('',
+        {media: './images/triceps/triangulo.png'}
+        )
+        .addAnswer('',
+        {media: './images/triceps/polea-unamano.jpg'}
+        )
+        .addAnswer('',
+        {media: './images/triceps/rompe-craneos.jpg'}
+        )
+        .addAnswer('./images/triceps/fondos.png',
         {media: ''}
         )
 ///
@@ -86,8 +116,18 @@ const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios 
 const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de biceps','ejercicios de biceps'])
     .addAnswer('Aquí tienes tu rutina de biceps')
     .addAnswer('',
-        {media: ''}
+        {media: './images/biceps/curl-biceps-tumbado.png]'}
         )
+        .addAnswer('',
+        {media: './images/biceps/curl-barra-z.png'}
+        )
+        .addAnswer('',
+        {media: './images/biceps/martillos.png'}
+        )
+        .addAnswer('',
+        {media: './images/biceps/martillos.png'}
+        )
+        
 ///
 //      -abs
 //
@@ -118,7 +158,9 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
         '- Gluteo',
         '- Biceps',
         '- Triceps',
-        '- Abdomen'
+        '- Abdomen',
+        '',
+        '_Escribe lo que vas a entrenar hoy_'
         ],
         null,
         null, 
