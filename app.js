@@ -1,7 +1,7 @@
 const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
 
 const QRPortalWeb = require('@bot-whatsapp/portal')
-const BaileysProvider = require('@bot-whatsapp/provider/baileys')
+const BaileysProvider = require('@bot-whatsapp/provider/Venom')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
 const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
