@@ -13,7 +13,7 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
     .addAnswer('Esta es tu rutina de pierna')
     .addAnswer('mensaje',
-        {media: 'https://m.media-amazon.com/images/I/61qrOC2vIeL._AC_SX679_.jpg'}
+        {media: 'https://1drv.ms/i/s!AgZl6xptImlagbMe4_MrJJn6Vp6FOQ?e=0rdFmP'}
         )
 
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
