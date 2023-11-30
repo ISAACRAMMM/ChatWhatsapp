@@ -6,60 +6,58 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
-const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswer(
-    [
-        '📄 Aquí encontras las documentación recuerda que puedes mejorarla',
-        'https://bot-whatsapp.netlify.app/',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
 
-const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
-    [
-        '🙌 Aquí encontras un ejemplo rapido',
-        'https://bot-whatsapp.netlify.app/docs/example/',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
 
-const flowGracias = addKeyword(['gracias', 'grac']).addAnswer(
-    [
-        '🚀 Puedes aportar tu granito de arena a este proyecto',
-        '[*opencollective*] https://opencollective.com/bot-whatsapp',
-        '[*buymeacoffee*] https://www.buymeacoffee.com/leifermendez',
-        '[*patreon*] https://www.patreon.com/leifermendez',
-        '\n*2* Para siguiente paso.',
-    ],
-    null,
-    null,
-    [flowSecundario]
-)
 
-const flowDiscord = addKeyword(['discord']).addAnswer(
-    ['🤪 Únete al discord', 'https://link.codigoencasa.com/DISCORD', '\n*2* Para siguiente paso.'],
-    null,
-    null,
-    [flowSecundario]
-)
+
+const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
+
+const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
+
+const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espalda'])
+
+const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo','pompa','culo','nalgas'])
+
+const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios de triceps','rutina de triceps'])
+
+const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de biceps','ejercicios de biceps'])
+
+const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios de abdomen'])
 
 const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina'])
     .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
     .addAnswer([
-        'Que vamos a hacer el dia de hoy?',
-        '[Pecho]',
-        '[Espalda]',
-        '[Pierna]',
-        '[Gluteo]',
-        '[Brazo]',
-        '[Abdomen]',
-
-        ])
+        'Que vamos a hacer el dia de hoy?',{
+            buttons: [
+            {
+                body:'Pecho'
+            },
+            {
+                body:'Espalda'
+            },
+            {
+                body:'Pierna'
+            },
+            {
+                body:'Gluteo'
+            },
+            {
+                body:'Biceps'
+            },
+            {
+                body:'Triceps'
+            },
+            {
+                body:'Abdomen'
+            }
+        ]
+        }
+        
+        ],
+        null,
+        null, 
+        [flowSecundario]
+        )
     
 
 const main = async () => {
