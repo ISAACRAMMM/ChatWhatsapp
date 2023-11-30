@@ -4,7 +4,7 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
-const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
+
 
 
 
@@ -27,7 +27,7 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina'])
     .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
     .addAnswer('Que vamos a hacer el dia de hoy?',{
-            buttons: [
+            buttons:[
             {
                 body:'Pecho'
             },
