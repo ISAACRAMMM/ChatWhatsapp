@@ -11,12 +11,35 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 
 
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
-    .addAnswer('Esta es tu rutina de pierna')
-    .addAnswer('mensaje',
-        {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/press-de-banca-con-barra-init-pos-3832.png'}
+    .addAnswer(['Esta es tu rutina de pierna','Empecemos con...'])
+    .addAnswer('sentadillas series de 10 a 12 repeticiones ...',
+        {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/media-sentadilla-con-barra-init-pos-8649.png'}
         )
+    .addAnswer('mensaje',
+        {media: './images/img simulacion.png'}
+        )
+    .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
+        {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
+        )
+    
 
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
+    .addAnswer('Esta es tu rutina de pierna')
+    .addAnswer('',
+        {media: ''}
+        )
+    .addAnswer('',
+        {media: ''}
+        )
+    .addAnswer('',
+        {media: ''}
+        )
+    .addAnswer('',
+        {media: ''}
+        )
+    .addAnswer('',
+        {media: ''}
+        )
 
 const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espalda'])
 
