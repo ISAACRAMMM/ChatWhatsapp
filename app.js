@@ -26,7 +26,7 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 
 const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina'])
     .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
-    .addAnswer([
+    .addAnswer(
         'Que vamos a hacer el dia de hoy?',{
             buttons: [
             {
@@ -51,9 +51,9 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
                 body:'Abdomen'
             }
         ]
-        }
+        },
         
-        ],
+        
         null,
         null, 
         [flowSecundario]
