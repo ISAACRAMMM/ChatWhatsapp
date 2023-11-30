@@ -11,7 +11,8 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 
 
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
-    .addAnswer({media: './images/img simulacion.png'})
+    .addAnswer('Esta es tu rutina de pierna')
+    .addAnswer({media: './images/img simulacion.png'},)
 
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
 
