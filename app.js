@@ -40,7 +40,8 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
         ],
         null,
         null, 
-        [flowSecundario]
+        [flowSecundario],
+        [flowPierna]
         )
     
 
