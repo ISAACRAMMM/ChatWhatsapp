@@ -49,7 +49,7 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
             {
                 body:'Abdomen'
             }
-        ]
+        ],
         })
     
 
