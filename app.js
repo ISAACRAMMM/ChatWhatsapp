@@ -12,7 +12,7 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
     .addAnswer('Esta es tu rutina de pierna')
-    .addAnswer(
+    .addAnswer('mensaje',
         {media: 'https://m.media-amazon.com/images/I/61qrOC2vIeL._AC_SX679_.jpg'}
         )
 
