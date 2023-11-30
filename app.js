@@ -1,11 +1,3 @@
-const { dirname } = require('path');
-const { fileURLToPath } = require('url');
-const express = require('express');
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const app=express();
-app.use(express.static(__dirname,images));
-
 const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
 
 const QRPortalWeb = require('@bot-whatsapp/portal')
@@ -17,10 +9,11 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 
 
 
+
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
     .addAnswer('Esta es tu rutina de pierna')
     .addAnswer('mensaje',
-        {media: './images/img simulacion.png'}
+        {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/press-de-banca-con-barra-init-pos-3832.png'}
         )
 
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
