@@ -15,8 +15,14 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
     .addAnswer(['Esta es tu rutina de pierna','Empecemos con...'])
     .addAnswer('sentadilla libre series de 10 a 12 repeticiones ...',
-        {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/media-sentadilla-con-barra-init-pos-8649.png'}
+        {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/media-sentadilla-con-barra-init-pos-8649.png'},
         )
+    .addAnswer('Dime cuando finalices',
+    {capture: true,},(ctx)=>{
+            if(ctx.body.includes('ya')){
+
+            }
+    })
     .addAnswer('Puedes *cambiar* la sentadilla libre por la sentadilla en Smith, vas a realizar 4 series de 12 a 14 repeticiones ',
         {media: './images/pierna/sentadilla-smit.png'}
         )
@@ -59,12 +65,15 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
 const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espalda'])
     .addAnswer('Aquí tienes tu rutina de espalda')
     .addAnswer('Empieza con jalón a la cara con la barra larga, en aun agarre abierto realiza 4 series de 12 repeticiones',
+        {media: './images/espalda/jalon-cara.png'}
+        )
+    .addAnswer('Ya que acabes cambia la barra por el triangulo para que realices 4 series de 15 repeticiones',
         {media: './images/espalda/jalon-cerrado.png'}
         )
-    .addAnswer('',
+        .addAnswer('Ya que acabes cambia la barra por el triangulo para que realices 4 series de 15 repeticiones',
         {media: './images/espalda/remo-polea.png'}
         )
-    .addAnswer('',
+    .addAnswer('Coloca el aparato de Peck en suposición cerrada inversa para que con poco peso realices 3 series de 20 repeticiones ',
         {media: './images/espalda/aperturas-invertida.png'}
         )
     .addAnswer('',
