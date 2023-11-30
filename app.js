@@ -12,7 +12,7 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
     .addAnswer('Esta es tu rutina de pierna')
-    .addAnswer({media: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png'})
+    .addAnswer({media: './images/img simulacion.png'})
 
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
 
@@ -41,13 +41,18 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
         null,
         null, 
         [flowSecundario],
-        [flowPierna]
+        [flowPierna],
+        [flowEspalda],
+        [flowGluteo],
+        [flowTriceps],
+        [flowBiceps],
+        [flowAbdomen]
         )
     
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal,flowAbdomen,flowBiceps,flowEspalda,flowGluteo,flowPecho,flowPierna])
+    const adapterFlow = createFlow([flowPrincipal,flowAbdomen,flowBiceps,flowEspalda,flowGluteo,flowPecho,flowPierna,flowTriceps])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
