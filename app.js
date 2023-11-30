@@ -1,7 +1,7 @@
 const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
 
 const QRPortalWeb = require('@bot-whatsapp/portal')
-const BaileysProvider = require('@bot-whatsapp/provider/venom')
+const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
 const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
@@ -12,7 +12,7 @@ const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí ten
 
 const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
     .addAnswer('Esta es tu rutina de pierna')
-    .addAnswer({media: './images/img simulacion.png'})
+    .addAnswer({media: './images/img simulacion.png'},)
 
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
 
