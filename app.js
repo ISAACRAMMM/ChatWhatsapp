@@ -17,15 +17,15 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
     .addAnswer('sentadilla libre series de 10 a 12 repeticiones ...',
         {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/media-sentadilla-con-barra-init-pos-8649.png'},
         )
-    .addAnswer('Dime cuando finalices',
-    {capture: true,},(ctx)=>{
-            if(ctx.body.includes('ya')){
-
-            }
-    })
     .addAnswer('Puedes *cambiar* la sentadilla libre por la sentadilla en Smith, vas a realizar 4 series de 12 a 14 repeticiones ',
         {media: './images/pierna/sentadilla-smit.png'}
         )
+        .addAnswer('Dime cuando finalices',
+        {capture: true,},(ctx,{fallBack})=>{
+                if(ctx.body.includes('ya')){
+                    return fallBack()
+                }
+        })
     .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
         {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
         )
