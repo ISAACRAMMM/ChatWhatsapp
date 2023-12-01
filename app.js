@@ -23,18 +23,18 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
     .addAnswer('Puedes *cambiar* la sentadilla libre por la sentadilla en Smith, vas a realizar 4 series de 12 a 14 repeticiones ',
         {media: './images/pierna/sentadilla-smit.png'}
         )
-        .addAnswer('Dime cuando finalices',
+        .addAnswer('Dime cuando termines',
         {capture: true,},(ctx,{fallBack})=>{
             const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
-            if (!valoresPermitidos.includes(ctx.body)) {
+            if (valoresPermitidos.includes(ctx.body)) {
             return fallBack();
             }          
         })
     .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
         {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
         )
-        .addAnswer('Dime cuando finalices',
+        .addAnswer('Dime cuando termines',
         {capture: true,},(ctx,{fallBack})=>{
             const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
@@ -48,7 +48,7 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
         .addAnswer('... extensiones de femoral 3 series de 15 repeticiones _recuerda descansar entre series al menos 60 segundos_',
         {media: './images/pierna/banco-extencion-fem.jpg'}
         )
-        .addAnswer('Dime cuando finalices',
+        .addAnswer('Dime cuando termines',
         {capture: true,},(ctx,{fallBack})=>{
             const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
@@ -59,7 +59,7 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
         .addAnswer('Continuamos con femoral acostado, dirígete al aparato que es un banco y colócate boca abajo para realizar 4 series de 10 repeticiones',
         {media: './images/pierna/curl-femoral.png'}
         )
-        .addAnswer('Dime cuando finalices',
+        .addAnswer('Dime cuando termines',
         {capture: true,},(ctx,{fallBack})=>{
             const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
@@ -79,7 +79,7 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
     .addAnswer('Vas a empezar con press de pecho en maquina realiza 4 series de 10 repeticiones ',
         {media: './images/pecho/press-maquina.png'}
         )
-    .addAnswer('Cuando finalices continua con press de pecho en banco ( _ajusta la altura al tercer punto partiendo de plano_ ) realiza 4 series de 8 a 12 repeticiones ',
+    .addAnswer('Cuando termines continua con press de pecho en banco ( _ajusta la altura al tercer punto partiendo de plano_ ) realiza 4 series de 8 a 12 repeticiones ',
         {media: './images/pecho/Press-de-banca-inclinado.png'}
         )
     .addAnswer('Después te vas a dirigir a la máquina de peck  para realizar aperturas realiza 3 series de 20 repeticiones con un peso bajo',
