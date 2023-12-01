@@ -25,10 +25,11 @@ const flowCalentamiento = addKeyword(['calentamiento'])
         .addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
             {capture: true},(ctx,{fallBack, gotoFlow}) =>{
                 const valoresPermitidos = [ 'aun no', 'no'];
+                const valoresConfirmacion = [ 'si', 'ya', 'listo'];
 
                 if (valoresPermitidos.includes(ctx.body)) {
                     return gotoFlow(flowCalentamiento)
-                }else{
+                }else if(valoresPermitidos.includes(ctx.body)){
                     return fallBack();
                 }  
             })
