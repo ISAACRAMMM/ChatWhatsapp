@@ -30,7 +30,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
 
                 if (valoresPermitidos.includes(ctx.body)) {
                     return gotoFlow(flowCalentamiento)
-                }else if(valoresConfirmacion.includes(ctx.body)){
+                }else if(valoresPermitidos.includes(ctx.body)){
                     return fallBack();
                 }  
             })
