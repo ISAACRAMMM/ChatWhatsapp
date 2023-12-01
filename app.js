@@ -4,7 +4,8 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
-const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
+const flowSecundario = addKeyword(['mas opciones', 'que me recomiendas', 'recomendaciones'])
+    .addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
 
 
@@ -22,13 +23,19 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
         )
         .addAnswer('Dime cuando finalices',
         {capture: true,},(ctx,{fallBack})=>{
-                if(ctx.body!=='ya'){
+                if(ctx.body!=='ya'||ctx.body!=='ya acabe'||ctx.body!=='ya termine'||ctx.body!=='listo'||ctx.body!=='termine'||ctx.body.contains('siguiente')){
                     return fallBack()
                 }
         })
     .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
         {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
         )
+        .addAnswer('Dime cuando finalices',
+        {capture: true,},(ctx,{fallBack})=>{
+                if(ctx.body!=='ya'||ctx.body!=='ya acabe'||ctx.body!=='ya termine'||ctx.body!=='listo'||ctx.body!=='termine'||ctx.body.contains('siguiente')){
+                    return fallBack()
+                }
+        })
         .addAnswer('Cuando termines con la prensa dirígete a el banco para extensión de cuádriceps es el que se muestra en la imagen☝️ vas a realizar 3 series de 15 repeticiones y vas a alternar con…👇',
         {media: './images/pierna/extension_cuadriceps.jpg'}
         )
