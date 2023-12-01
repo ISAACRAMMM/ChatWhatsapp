@@ -11,65 +11,92 @@ const flowSecundario = addKeyword(['mas opciones', 'que me recomiendas', 'recome
 const flowTerminar= addKeyword(['finalizar','terminar','fin'])
     .addAnswer('fin')
 
+//
+//      -calentamiento
+//
+const flowCalentamiento = addKeyword([''])
+    .addAnswer('',
+        null,
+        null, 
+        [flowSecundario,
+        flowPierna,
+        flowEspalda,
+        flowGluteo,
+        flowPecho,
+        flowTriceps,
+        flowBiceps,
+        flowAbdomen,
+        flowHombro])
+
 
 ///
 //      -pierna
 //
-const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
-    .addAnswer(['Esta es tu rutina de pierna','Empecemos con...'])
-    .addAnswer('sentadilla libre series de 10 a 12 repeticiones ...',
-        {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/media-sentadilla-con-barra-init-pos-8649.png'},
-        )
-    .addAnswer('Puedes *cambiar* la sentadilla libre por la sentadilla en Smith, vas a realizar 4 series de 12 a 14 repeticiones ',
-        {media: './images/pierna/sentadilla-smit.png'}
-        )
-        .addAnswer('Dime cuando termines',
-        {capture: true,},(ctx,{fallBack})=>{
-            const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+    const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
+        .addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
+            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+                const valoresPermitidos = ['ya', 'aun no', 'no', 'si'];
 
-            if (valoresPermitidos.includes(ctx.body)) {
-            return fallBack();
-            }          
-        })
-    .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
-        {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
-        )
-        .addAnswer('Dime cuando termines',
-        {capture: true,},(ctx,{fallBack})=>{
-            const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+                if (valoresPermitidos.includes(ctx.body)) {
+                    gotoFlow(flowCalentamiento)
+                }else{
+                    return fallBack();
+                }  
+            })
+        .addAnswer(['Esta es tu rutina de pierna','Empecemos con...'])
+        .addAnswer('sentadilla libre series de 10 a 12 repeticiones ...',
+            {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/media-sentadilla-con-barra-init-pos-8649.png'},
+            )
+        .addAnswer('Puedes *cambiar* la sentadilla libre por la sentadilla en Smith, vas a realizar 4 series de 12 a 14 repeticiones ',
+            {media: './images/pierna/sentadilla-smit.png'}
+            )
+            .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
-            if (!valoresPermitidos.includes(ctx.body)) {
-            return fallBack();
-            }          
-        })
+                if (valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
+        .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
+            {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
+            )
+            .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+
+                if (valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('Cuando termines con la prensa dirígete a el banco para extensión de cuádriceps es el que se muestra en la imagen☝️ vas a realizar 3 series de 15 repeticiones y vas a alternar con…👇',
-        {media: './images/pierna/extension_cuadriceps.jpg'}
-        )
-        .addAnswer('... extensiones de femoral 3 series de 15 repeticiones _recuerda descansar entre series al menos 60 segundos_',
-        {media: './images/pierna/banco-extencion-fem.jpg'}
-        )
+            {media: './images/pierna/extension_cuadriceps.jpg'}
+            )
+            .addAnswer('... extensiones de femoral 3 series de 15 repeticiones _recuerda descansar entre series al menos 60 segundos_',
+            {media: './images/pierna/banco-extencion-fem.jpg'}
+            )
         .addAnswer('Dime cuando termines',
-        {capture: true,},(ctx,{fallBack})=>{
-            const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+            {capture: true,},(ctx,{fallBack})=>{
+                const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
-            if (!valoresPermitidos.includes(ctx.body)) {
-            return fallBack();
-            }          
-        })
+                if (valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('Continuamos con femoral acostado, dirígete al aparato que es un banco y colócate boca abajo para realizar 4 series de 10 repeticiones',
-        {media: './images/pierna/curl-femoral.png'}
-        )
-        .addAnswer('Dime cuando termines',
-        {capture: true,},(ctx,{fallBack})=>{
-            const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+            {media: './images/pierna/curl-femoral.png'}
+            )
+            .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
-            if (!valoresPermitidos.includes(ctx.body)) {
-            return fallBack();
-            }          
-        })
-        .addAnswer('Vamos a finalizar con pantorrillas en la maquina costurera 5 series de 15 repeticiones',
-        {media: './images/pierna/extension-de-gemelos-sentado.png'}
-        )
+                if (valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
+            .addAnswer('Vamos a finalizar con pantorrillas en la maquina costurera 5 series de 15 repeticiones',
+            {media: './images/pierna/extension-de-gemelos-sentado.png'}
+            )
     
 ///
 //      -pecho
@@ -198,7 +225,7 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 ///
 //      -
 //
-const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina','ahora que sigue','ya acabe', 'que otra cosa hago'])
+const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina',])
     .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
     .addAnswer(['Que vamos a hacer el dia de hoy?',
         
