@@ -184,8 +184,15 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
     flowHombro]
     )
     .addAnswer('Que vamos a hacer el dia de hoy?',{
-        buttons:[{body:'Pecho'},{body:'Espalda'},{body:'Pierna'},{body:'Gluteo'},{body:'Biceps'},{body:'Triceps'},{body:'Abdomen'}],}
-        )
+        buttons:[
+        {body: 'Pecho'},
+        {body: 'Espalda'},
+        {body: 'Pierna'},
+        {body: 'Gluteo'},
+        {body: 'Biceps'},
+        {body: 'Triceps'},
+        {body: 'Abdomen'}
+    ],})
     
 
 const main = async () => {
