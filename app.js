@@ -22,7 +22,7 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
         )
         .addAnswer('Dime cuando finalices',
         {capture: true,},(ctx,{fallBack})=>{
-                if(ctx.body!=='ya'){
+                if(ctx.body==='ya'){
                     return fallBack()
                 }
         })
