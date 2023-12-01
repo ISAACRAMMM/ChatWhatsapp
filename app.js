@@ -170,7 +170,18 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 //      -
 //
 const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina','ahora que sigue','ya acabe', 'que otra cosa hago'])
-    .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35',
+    .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
+    .addAnswer('Que vamos a hacer el dia de hoy?',
+        
+    '- Pecho',
+    '- Espalda',
+    '- Pierna',
+    '- Gluteo',
+    '- Biceps',
+    '- Triceps',
+    '- Abdomen',
+    '',
+    '_Escribe lo que vas a entrenar hoy_',
     null,
     null, 
     [flowSecundario,
@@ -183,16 +194,7 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
     flowAbdomen,
     flowHombro]
     )
-    .addAnswer('Que vamos a hacer el dia de hoy?',{
-        buttons:[
-        {body: 'Pecho'},
-        {body: 'Espalda'},
-        {body: 'Pierna'},
-        {body: 'Gluteo'},
-        {body: 'Biceps'},
-        {body: 'Triceps'},
-        {body: 'Abdomen'}
-    ],})
+    
     
 
 const main = async () => {
