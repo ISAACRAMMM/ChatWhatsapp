@@ -8,7 +8,8 @@ const flowSecundario = addKeyword(['mas opciones', 'que me recomiendas', 'recome
     .addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
 
-
+const flowTerminar= addKeyword(['finalizar','terminar'])
+    .addAnswer('fin')
 
 ///
 //      -pierna
@@ -28,8 +29,12 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
             if (!valoresPermitidos.includes(ctx.body)) {
             return fallBack();
             }
+            const valoresFin=['fin', 'me voy'];
+            if(!valoresPermitidos.includes(ctx.body)){
+                
+            }
 
-        })
+        },null,[flowTerminar])
     .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
         {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
         )
