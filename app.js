@@ -24,7 +24,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
     const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
         .addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
             {capture: true},(ctx,{fallBack, gotoFlow}) =>{
-                const valoresPermitidos = ['ya', 'aun no', 'no', 'si'];
+                const valoresPermitidos = [ 'aun no', 'no'];
 
                 if (valoresPermitidos.includes(ctx.body)) {
                     return gotoFlow(flowCalentamiento)
