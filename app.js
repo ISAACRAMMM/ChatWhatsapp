@@ -185,14 +185,15 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
         ],
         null,
         null, 
-        [flowSecundario],
-        [flowPierna],
-        [flowEspalda],
-        [flowGluteo],
-        [flowTriceps],
-        [flowBiceps],
-        [flowAbdomen],
-        [flowHombro]
+        [flowSecundario,
+        flowPierna,
+        flowEspalda,
+        flowGluteo,
+        flowPecho,
+        flowTriceps,
+        flowBiceps,
+        flowAbdomen,
+        flowHombro]
         )
     
 
