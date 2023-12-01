@@ -170,20 +170,21 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 //      -
 //
 const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina','ahora que sigue','ya acabe', 'que otra cosa hago'])
-    
-    .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35  Que vamos a hacer el dia de hoy?',{
-        buttons:[{body:'Pecho'},{body:'Espalda'},{body:'Pierna'},{body:'Gluteo'},{body:'Biceps'},{body:'Triceps'},{body:'Abdomen'}],},
-        null,
-        null,
-        [flowSecundario,
-        flowPierna,
-        flowEspalda,
-        flowGluteo,
-        flowPecho,
-        flowTriceps,
-        flowBiceps,
-        flowAbdomen,
-        flowHombro]
+    .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35',
+    null,
+    null, 
+    [flowSecundario,
+    flowPierna,
+    flowEspalda,
+    flowGluteo,
+    flowPecho,
+    flowTriceps,
+    flowBiceps,
+    flowAbdomen,
+    flowHombro]
+    )
+    .addAnswer('Que vamos a hacer el dia de hoy?',{
+        buttons:[{body:'Pecho'},{body:'Espalda'},{body:'Pierna'},{body:'Gluteo'},{body:'Biceps'},{body:'Triceps'},{body:'Abdomen'}]}
         )
     
 
