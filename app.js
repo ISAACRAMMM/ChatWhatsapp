@@ -15,18 +15,7 @@ const flowTerminar= addKeyword(['finalizar','terminar','fin'])
 //      -calentamiento
 //
 const flowCalentamiento = addKeyword(['calentamiento'])
-    .addAnswer('cal',
-        null,
-        null, 
-        [flowSecundario,
-        flowPierna,
-        flowEspalda,
-        flowGluteo,
-        flowPecho,
-        flowTriceps,
-        flowBiceps,
-        flowAbdomen,
-        flowHombro])
+    .addAnswer('cal')
 
 
 ///
