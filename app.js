@@ -93,17 +93,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
 //      -pecho
 //
 const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pectorales'])
-addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
-            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
-                const valoresPermitidos = [ 'aun no', 'no'];
-                const valoresConfirmacion = [ 'si', 'ya', 'listo'];
 
-                if (valoresPermitidos.includes(ctx.body)) {
-                    return gotoFlow(flowCalentamiento)
-                }else if(valoresConfirmacion.includes(ctx.body)){
-                    return fallBack();
-                }  
-            })
     .addAnswer('Esta es tu rutina de pecho')
     .addAnswer('Vas a empezar con press de pecho en maquina realiza 4 series de 10 repeticiones ',
         {media: './images/pecho/press-maquina.png'}
