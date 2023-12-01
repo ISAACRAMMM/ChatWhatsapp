@@ -11,6 +11,7 @@ const flowSecundario = addKeyword(['mas opciones', 'que me recomiendas', 'recome
 const flowTerminar= addKeyword(['finalizar','terminar','fin'])
     .addAnswer('fin')
 
+
 ///
 //      -pierna
 //
@@ -28,19 +29,18 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
 
             if (!valoresPermitidos.includes(ctx.body)) {
             return fallBack();
-            }
-            const valoresFin=['fin', 'me voy'];
-           
-
+            }          
         })
     .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
         {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
         )
         .addAnswer('Dime cuando finalices',
         {capture: true,},(ctx,{fallBack})=>{
-                if(ctx.body!=='ya'||ctx.body!=='ya acabe'||ctx.body!=='ya termine'||ctx.body!=='listo'||ctx.body!=='termine'||ctx.body.contains('siguiente')){
-                    return fallBack()
-                }
+            const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+
+            if (!valoresPermitidos.includes(ctx.body)) {
+            return fallBack();
+            }          
         })
         .addAnswer('Cuando termines con la prensa dirígete a el banco para extensión de cuádriceps es el que se muestra en la imagen☝️ vas a realizar 3 series de 15 repeticiones y vas a alternar con…👇',
         {media: './images/pierna/extension_cuadriceps.jpg'}
@@ -48,9 +48,25 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
         .addAnswer('... extensiones de femoral 3 series de 15 repeticiones _recuerda descansar entre series al menos 60 segundos_',
         {media: './images/pierna/banco-extencion-fem.jpg'}
         )
+        .addAnswer('Dime cuando finalices',
+        {capture: true,},(ctx,{fallBack})=>{
+            const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+
+            if (!valoresPermitidos.includes(ctx.body)) {
+            return fallBack();
+            }          
+        })
         .addAnswer('Continuamos con femoral acostado, dirígete al aparato que es un banco y colócate boca abajo para realizar 4 series de 10 repeticiones',
         {media: './images/pierna/curl-femoral.png'}
         )
+        .addAnswer('Dime cuando finalices',
+        {capture: true,},(ctx,{fallBack})=>{
+            const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+
+            if (!valoresPermitidos.includes(ctx.body)) {
+            return fallBack();
+            }          
+        })
         .addAnswer('Vamos a finalizar con pantorrillas en la maquina costurera 5 series de 15 repeticiones',
         {media: './images/pierna/extension-de-gemelos-sentado.png'}
         )
