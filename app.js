@@ -21,7 +21,7 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
         {media: './images/pierna/sentadilla-smit.png'}
         )
         .addAnswer('Dime cuando finalices',
-        {capture: true,},null,(ctx,{fallBack})=>{
+        {capture: true,},(ctx,{fallBack})=>{
                 if(ctx.body!=='ya'){
                     return fallBack()
                 }
