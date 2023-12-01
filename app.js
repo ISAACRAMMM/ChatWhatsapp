@@ -14,8 +14,8 @@ const flowTerminar= addKeyword(['finalizar','terminar','fin'])
 //
 //      -calentamiento
 //
-const flowCalentamiento = addKeyword([''])
-    .addAnswer('',
+const flowCalentamiento = addKeyword(['calentamiento'])
+    .addAnswer('cal',
         null,
         null, 
         [flowSecundario,
