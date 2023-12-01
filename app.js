@@ -25,7 +25,7 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
         {capture: true,},(ctx,{fallBack})=>{
             const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
-            if (!valoresPermitidos.includes(ctx.body) || !ctx.body.includes('siguiente')) {
+            if (!valoresPermitidos.includes(ctx.body)) {
             return fallBack();
             }
 
