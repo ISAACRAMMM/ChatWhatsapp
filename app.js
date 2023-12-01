@@ -8,7 +8,7 @@ const flowSecundario = addKeyword(['mas opciones', 'que me recomiendas', 'recome
     .addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
 
-const flowTerminar= addKeyword(['finalizar','terminar'])
+const flowTerminar= addKeyword(['finalizar','terminar','fin'])
     .addAnswer('fin')
 
 ///
@@ -30,9 +30,7 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
             return fallBack();
             }
             const valoresFin=['fin', 'me voy'];
-            if(!valoresPermitidos.includes(ctx.body)){
-                flowTerminar
-            }
+           
 
         })
     .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
@@ -214,7 +212,7 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal])
+    const adapterFlow = createFlow([flowPrincipal,flowTerminar])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
