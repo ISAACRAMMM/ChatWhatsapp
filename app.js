@@ -188,7 +188,7 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
     '- Triceps',
     '- Abdomen',
     '',
-    '_Escribe lo que vas a entrenar hoy_',
+    '_Escribe lo que vas a entrenar hoy_'],
     null,
     null, 
     [flowSecundario,
@@ -200,7 +200,7 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
     flowBiceps,
     flowAbdomen,
     flowHombro]
-     ])
+     )
     
     
 
