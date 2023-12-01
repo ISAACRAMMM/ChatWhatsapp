@@ -31,10 +31,10 @@ const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna',
             }
             const valoresFin=['fin', 'me voy'];
             if(!valoresPermitidos.includes(ctx.body)){
-                
+                flowTerminar
             }
 
-        },null,[flowTerminar])
+        })
     .addAnswer('Cuando termines dirígete a la prensa donde vamos a hacer 4 series de peso moderado de 14 a 16 repeticiones ',
         {media: 'https://www.entrenamientos.com/media/cache/exercise_750/uploads/exercise/prensa-horizontal-en-maquina-init-pos-5520.png'}
         )
