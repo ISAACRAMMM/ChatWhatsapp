@@ -48,7 +48,7 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
             )
             .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (valoresPermitidos.includes(ctx.body)) {
+                if (!valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -57,7 +57,7 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
             )
             .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (valoresPermitidos.includes(ctx.body)) {
+                if (!valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
