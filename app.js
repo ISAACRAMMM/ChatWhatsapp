@@ -18,6 +18,11 @@ const flowCalentamiento = addKeyword(['calentamiento'])
     .addAnswer('cal')
 
 
+const flowcardio = addKeyword('cardio')
+.addAnswer()
+
+
+const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
 
 ///
 //      -pierna
@@ -25,12 +30,12 @@ const flowCalentamiento = addKeyword(['calentamiento'])
     const flowPierna=addKeyword(['pierna', 'rutina de pierna','ejecicios de pierna','piernas'])
         .addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
             {capture: true},(ctx,{fallBack, gotoFlow}) =>{
-                const valoresPermitidos = [ 'aun no', 'no'];
+                const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
                 const valoresConfirmacion = [ 'si', 'ya', 'listo'];
 
-                if (valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
                     return gotoFlow(flowCalentamiento)
-                }else if(valoresPermitidos.includes(ctx.body)){
+                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
                     return fallBack();
                 }  
             })
@@ -43,8 +48,6 @@ const flowCalentamiento = addKeyword(['calentamiento'])
             )
             .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
-
                 if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
@@ -54,8 +57,6 @@ const flowCalentamiento = addKeyword(['calentamiento'])
             )
             .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
-
                 if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
@@ -68,8 +69,6 @@ const flowCalentamiento = addKeyword(['calentamiento'])
             )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
-
                 if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
@@ -79,8 +78,6 @@ const flowCalentamiento = addKeyword(['calentamiento'])
             )
             .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
-
                 if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
@@ -111,7 +108,19 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
 //      -espalda
 //
 const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espalda'])
-    .addAnswer('Aquí tienes tu rutina de espalda')
+.addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
+            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+                const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
+                const valoresConfirmacion = [ 'si', 'ya', 'listo'];
+
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                    return gotoFlow(flowCalentamiento)
+                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                    return fallBack();
+                }  
+            })
+  
+            .addAnswer('Aquí tienes tu rutina de espalda')
     .addAnswer('Empieza con jalón a la cara con la barra larga, en aun agarre abierto realiza 4 series de 12 repeticiones',
         {media: './images/espalda/jalon-cara.png'}
         )
@@ -131,6 +140,17 @@ const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espal
 //      -gluteo
 //
 const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo','pompa','culo','nalgas'])
+.addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
+            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+                const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
+                const valoresConfirmacion = [ 'si', 'ya', 'listo'];
+
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                    return gotoFlow(flowCalentamiento)
+                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                    return fallBack();
+                }  
+            })
     .addAnswer('Aquí tienes tu rutina de gluteo')
     .addAnswer('',
         {media: './images/gluteo/sumo-peso.jpeg'}
@@ -151,6 +171,17 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
 //      -triceps
 //
 const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios de triceps','rutina de triceps'])
+.addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
+            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+                const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
+                const valoresConfirmacion = [ 'si', 'ya', 'listo'];
+
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                    return gotoFlow(flowCalentamiento)
+                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                    return fallBack();
+                }  
+            })
     .addAnswer('Aquí tienes tu rutina de triceps')
     .addAnswer('',
         {media: './images/triceps/triangulo.png'}
@@ -168,6 +199,17 @@ const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios 
 //      -biceps
 //
 const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de biceps','ejercicios de biceps'])
+.addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
+            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+                const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
+                const valoresConfirmacion = [ 'si', 'ya', 'listo'];
+
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                    return gotoFlow(flowCalentamiento)
+                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                    return fallBack();
+                }  
+            })
     .addAnswer('Aquí tienes tu rutina de biceps')
     .addAnswer('',
         {media: './images/biceps/curl-biceps-tumbado.png]'}
@@ -186,6 +228,17 @@ const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de
 //      -abs
 //
 const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios de abdomen'])
+.addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
+            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+                const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
+                const valoresConfirmacion = [ 'si', 'ya', 'listo'];
+
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                    return gotoFlow(flowCalentamiento)
+                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                    return fallBack();
+                }  
+            })
     .addAnswer('Aquí tienes tu rutina de abdomen')
     .addAnswer('',
         {media: './images/abdomen/abs.png'}
@@ -200,6 +253,17 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 //      -hombro
 //
     const flowHombro=addKeyword(['ombro', 'hombro', 'honbro','rutina de hombro','ejercicios de hombro'])
+    .addAnswer(['Antes de comenzar', 'ya realizaste tus calentamientos?'],
+            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+                const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
+                const valoresConfirmacion = [ 'si', 'ya', 'listo'];
+
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                    return gotoFlow(flowCalentamiento)
+                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                    return fallBack();
+                }  
+            })
     .addAnswer('Aquí tienes tu rutina de hombro ')
     .addAnswer('',
         {media: './images/hombro/press-hombro.png'}
