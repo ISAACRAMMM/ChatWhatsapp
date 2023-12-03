@@ -29,11 +29,11 @@ const flowCalentamiento = addKeyword(['calentamiento'])
         {media: './images/calentamiento/giros de cadera.png'}
         )
     .addAnswer(' ',
-        {media: './images/calentamiento/giros de cadera.png'}
+        {media: './images/calentamiento/tijeras.png'}
         )
 
     .addAnswer('Ya que realices tus calentamientos me avisas para continuar con tu rutina')
-            .addAction({capture: true},(ctx,{fallBack,gotoFlow}) =>{
+            .addAction({capture: true},(ctx,{gotoFlow}) =>{
                 const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
                 
                 if (valoresPermitidosCalentamiento.includes(ctx.body)) {
@@ -64,8 +64,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                     return gotoFlow(flowPrincipal)
                     
                 } else {
-                    
-                    return fallBack();
+                
                 }  
             })
 
