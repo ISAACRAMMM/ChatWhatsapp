@@ -16,6 +16,43 @@ let valorCal =''
 //
 const flowCalentamiento = addKeyword(['calentamiento'])
     .addAnswer('cal')
+    .addAnswer(['Ya que realices tus calentamientos me avisas para continuar con tu rutina'],
+            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+                const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
+                const valoresConfirmacion = [ ];
+
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                    if(valorCal==='pierna'){
+                    return gotoFlow(flowPierna)
+                    }
+                    if(valorCal==='abs'){
+                    return gotoFlow(flowAbdomen)
+                    }
+                    if(valorCal==='gluteo'){
+                    return gotoFlow(flowGluteo)
+                    }
+                    if(valorCal==='biceps'){
+                    return gotoFlow(flowBiceps)
+                    }
+                    if(valorCal==='triceps'){
+                    return gotoFlow(flowTriceps)
+                    }
+                    if(valorCal==='pecho'){
+                    return gotoFlow(flowPecho)
+                    }
+                    if(valorCal==='espalda'){
+                    return gotoFlow(flowEspalda)
+                    }
+                    if(valorCal==='hombro'){
+                    return gotoFlow(flowHombro)
+                    }
+                    
+                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                    
+                    return fallBack();
+                }  
+            })
+
 
 
 const flowcardio = addKeyword('cardio')
@@ -34,8 +71,10 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
                 const valoresConfirmacion = [ 'si', 'ya', 'listo'];
 
                 if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                    valorCal='pierna'
                     return gotoFlow(flowCalentamiento)
                 }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                    
                     return fallBack();
                 }  
             })
@@ -95,15 +134,39 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
     .addAnswer('Vas a empezar con press de pecho en maquina realiza 4 series de 10 repeticiones ',
         {media: './images/pecho/press-maquina.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Cuando termines continua con press de pecho en banco ( _ajusta la altura al tercer punto partiendo de plano_ ) realiza 4 series de 8 a 12 repeticiones ',
         {media: './images/pecho/Press-de-banca-inclinado.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Después te vas a dirigir a la máquina de peck  para realizar aperturas realiza 3 series de 20 repeticiones con un peso bajo',
         {media: './images/pecho/peck.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Vamos a terminar pecho realizando fondos en la máquina,  haz 4 series de 12 repeticiones con el agarre cerrado',
         {media: './images/pecho/fondos.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
 ///
 //      -espalda
 //
@@ -152,10 +215,13 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
                 }  
             })
     .addAnswer('Aquí tienes tu rutina de gluteo')
-    .addAnswer('',
+    .addAnswer('El primer ejercicio de tu rutina de glúteo es sentadilla suma, vas a realizar una primera serie de 15 repeticiones sin peso para terminar de calentar.',
+        {media: './images/gluteo/sumo-sinPeso.png.jpeg'}
+        )
+    .addAnswer('Posteriormente con un peso que controles realiza 4 series de 12 a 14 repeticiones',
         {media: './images/gluteo/sumo-peso.jpeg'}
         )
-    .addAnswer('',
+    .addAnswer('Después haz de 16 a 20 desplantes con el peso que puedas',
         {media: './images/gluteo/desplantes.png'}
         )
     .addAnswer('',
@@ -211,16 +277,16 @@ const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de
                 }  
             })
     .addAnswer('Aquí tienes tu rutina de biceps')
-    .addAnswer('',
+    .addAnswer('Inclina un banco a 30 0 45 grados con una mancuerna en cada mano a cada lado de sus caderas. Debería utilizar un agarre neutro. Contrayendo los bíceps, doble los codos totalmente supinando las manos mientras exhala. Vuelva a la posición inicial con un suave',
         {media: './images/biceps/curl-biceps-tumbado.png]'}
         )
-        .addAnswer('',
+        .addAnswer('Elige el peso adecuado de una barra z, Contrayendo los bíceps, dobla los codos totalmente como se muestra en la imagen ☝️ así realiza 4 series de 12 repeticiones. Mientras haces el ejercicio, mueve solo la articulación de los codos, asegúrese de no mover ninguna otra parte de tu cuerpo',
         {media: './images/biceps/curl-barra-z.png'}
         )
-        .addAnswer('',
+        .addAnswer('Con unas mancuernas realiza martillos. con una mancuerna en cada mano a cada lado de tus caderas. Contrae los bíceps doblando los codos manteniendo el agarre en todo momento. Realiza 4 series de 15 repeticiones',
         {media: './images/biceps/martillos.png'}
         )
-        .addAnswer('',
+        .addAnswer('Para finalizar con bíceps dirígete a la maquina predicador realiza 4 series de 12 a 15 repeticiones El pecho y la parte superior de los brazos deben colocarse contra las almohadillas. Sostén las manijas frente a ti con los codos extendidos',
         {media: './images/biceps/martillos.png'}
         )
         
@@ -281,9 +347,7 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 ///
 //      -
 //
-const flowString = addKeyword('pene').addAnswer('Este mensaje envia tres botones', {
-    buttons: [{ body: 'Boton 1' }, { body: 'Boton 2' }, { body: 'Boton 3' }],
-})
+
 
 const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina',])
     .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
@@ -315,7 +379,7 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal,flowTerminar,flowString])
+    const adapterFlow = createFlow([flowPrincipal,flowTerminar])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
