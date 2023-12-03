@@ -16,7 +16,7 @@ let valorCal =''
 //
 const flowCalentamiento = addKeyword(['calentamiento'])
     .addAnswer('cal')
-    addAnswer(valorCal)
+   
     .addAnswer(['Ya que realices tus calentamientos me avisas para continuar con tu rutina'],
             {capture: true},(ctx,{gotoFlow}) =>{
                 const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
