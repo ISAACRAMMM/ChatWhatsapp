@@ -63,7 +63,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                     }
                     return gotoFlow(flowPrincipal)
                     
-                } else if(!valoresPermitidosCalentamiento.includes(ctx.body)){
+                } else {
                     
                     return fallBack();
                 }  
