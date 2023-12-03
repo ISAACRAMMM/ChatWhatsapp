@@ -16,12 +16,28 @@ let valorCal =''
 //
 const flowCalentamiento = addKeyword(['calentamiento'])
     .addAnswer('cal')
-   
+    .addAnswer('',
+        {media: './images/calentamiento/estiramiento-de-hombro.png'}
+        )
+    .addAnswer('',
+        {media: './images/calentamiento/estiramiento-cuello.png'}
+        )
+    .addAnswer('',
+        {media: './images/calentamiento/estiramiento-extensores-muneca.png'}
+        )
+    .addAnswer('',
+        {media: './images/calentamiento/giros de cadera.png'}
+        )
+    .addAnswer('',
+        {media: './images/calentamiento/giros de cadera.png'}
+        )
+    .addAnswer('',
+        {media: './images/calentamiento'}
+        )
     .addAnswer(['Ya que realices tus calentamientos me avisas para continuar con tu rutina'],
             {capture: true},(ctx,{gotoFlow}) =>{
                 const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
                 console.log(valorCal);
-                return gotoFlow(flowPierna)
                 if (!valoresPermitidosCalentamiento.includes(ctx.body)) {
                     if(valorCal==='pierna'){
                     return gotoFlow(flowPierna)
