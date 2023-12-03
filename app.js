@@ -48,7 +48,9 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                     }
                     return gotoFlow(flowPrincipal)
                     
-                } 
+                } else{
+                    return gotoFlow(flowPrincipal)
+                }
             })
 
 
