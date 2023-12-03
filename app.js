@@ -16,24 +16,22 @@ let valorCal =''
 //
 const flowCalentamiento = addKeyword(['calentamiento'])
     .addAnswer('cal')
-    .addAnswer('',
+    .addAnswer(' ',
         {media: './images/calentamiento/estiramiento-de-hombro.png'}
         )
-    .addAnswer('',
+    .addAnswer(' ',
         {media: './images/calentamiento/estiramiento-cuello.png'}
         )
-    .addAnswer('',
+    .addAnswer(' ',
         {media: './images/calentamiento/estiramiento-extensores-muneca.png'}
         )
-    .addAnswer('',
+    .addAnswer(' ',
         {media: './images/calentamiento/giros de cadera.png'}
         )
-    .addAnswer('',
+    .addAnswer(' ',
         {media: './images/calentamiento/giros de cadera.png'}
         )
-    .addAnswer('',
-        {media: './images/calentamiento'}
-        )
+
     .addAnswer(['Ya que realices tus calentamientos me avisas para continuar con tu rutina'],
             {capture: true},(ctx,{gotoFlow}) =>{
                 const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
