@@ -20,7 +20,6 @@ const flowCalentamiento = addKeyword(['calentamiento'])
     .addAnswer(['Ya que realices tus calentamientos me avisas para continuar con tu rutina'],
             {capture: true},(ctx,{gotoFlow}) =>{
                 const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
-                const valoresConfirmacion = [ ];
                 console.log(valorCal);
                 if (!valoresPermitidosCalentamiento.includes(ctx.body)) {
                     if(valorCal==='pierna'){
@@ -47,6 +46,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                     if(valorCal==='hombro'){
                     return gotoFlow(flowHombro)
                     }
+                    return gotoFlow(flowPrincipal)
                     
                 } 
             })
