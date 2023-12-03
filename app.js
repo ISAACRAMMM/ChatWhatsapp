@@ -1,4 +1,4 @@
-const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
+const { createBot, createProvider, createFlow, addKeyword, addAnswer } = require('@bot-whatsapp/bot')
 
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
@@ -16,8 +16,9 @@ let valorCal =''
 //
 const flowCalentamiento = addKeyword(['calentamiento'])
     .addAnswer('cal')
+    addAnswer(valorCal)
     .addAnswer(['Ya que realices tus calentamientos me avisas para continuar con tu rutina'],
-            {capture: true},(ctx,{fallBack, gotoFlow}) =>{
+            {capture: true},(ctx,{gotoFlow}) =>{
                 const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
                 const valoresConfirmacion = [ ];
                 console.log(valorCal);
@@ -47,10 +48,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                     return gotoFlow(flowHombro)
                     }
                     
-                }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
-                    
-                    return fallBack();
-                }  
+                } 
             })
 
 
@@ -287,7 +285,7 @@ const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de
         {media: './images/biceps/martillos.png'}
         )
         .addAnswer('Para finalizar con bíceps dirígete a la maquina predicador realiza 4 series de 12 a 15 repeticiones El pecho y la parte superior de los brazos deben colocarse contra las almohadillas. Sostén las manijas frente a ti con los codos extendidos',
-        {media: './images/biceps/martillos.png'}
+        {media: './images/biceps/curl-de-biceps.png'}
         )
         
 ///
