@@ -32,33 +32,33 @@ const flowCalentamiento = addKeyword(['calentamiento'])
         {media: './images/calentamiento/giros de cadera.png'}
         )
 
-    .addAnswer(['Ya que realices tus calentamientos me avisas para continuar con tu rutina'],
+    .addAnswer('Ya que realices tus calentamientos me avisas para continuar con tu rutina',
             {capture: true},(ctx,{fallBack,gotoFlow}) =>{
                 const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
                 
                 if (valoresPermitidosCalentamiento.includes(ctx.body)) {
-                    if(valorCal==='pierna'){
+                    if(valorCal=='pierna'){
                     return gotoFlow(flowPierna)
                     }
-                    if(valorCal==='abs'){
+                    if(valorCal=='abs'){
                     return gotoFlow(flowAbdomen)
                     }
-                    if(valorCal==='gluteo'){
+                    if(valorCal=='gluteo'){
                     return gotoFlow(flowGluteo)
                     }
-                    if(valorCal==='biceps'){
+                    if(valorCal=='biceps'){
                     return gotoFlow(flowBiceps)
                     }
-                    if(valorCal==='triceps'){
+                    if(valorCal=='triceps'){
                     return gotoFlow(flowTriceps)
                     }
-                    if(valorCal==='pecho'){
+                    if(valorCal=='pecho'){
                     return gotoFlow(flowPecho)
                     }
-                    if(valorCal==='espalda'){
+                    if(valorCal=='espalda'){
                     return gotoFlow(flowEspalda)
                     }
-                    if(valorCal==='hombro'){
+                    if(valorCal=='hombro'){
                     return gotoFlow(flowHombro)
                     }
                     return gotoFlow(flowPrincipal)
