@@ -75,7 +75,7 @@ const flowcardio = addKeyword('cardio')
         )
 
 
-const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
+const valoresPermitidos = ['ya', 'ya acabe', 'ya termine','si', 'listo', 'termine'];
 
 ///
 //      -pierna
