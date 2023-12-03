@@ -281,6 +281,10 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 ///
 //      -
 //
+const flowString = addKeyword('pene').addAnswer('Este mensaje envia tres botones', {
+    buttons: [{ body: 'Boton 1' }, { body: 'Boton 2' }, { body: 'Boton 3' }],
+})
+
 const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina',])
     .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
     .addAnswer(['Que vamos a hacer el dia de hoy?',
@@ -311,7 +315,7 @@ const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal,flowTerminar])
+    const adapterFlow = createFlow([flowPrincipal,flowTerminar,flowString])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
