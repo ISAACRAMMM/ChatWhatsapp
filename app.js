@@ -21,6 +21,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
             {capture: true},(ctx,{gotoFlow}) =>{
                 const valoresPermitidosCalentamiento = [ 'si', 'ya', 'listo' , 'termine'];
                 console.log(valorCal);
+                return gotoFlow(flowPierna)
                 if (!valoresPermitidosCalentamiento.includes(ctx.body)) {
                     if(valorCal==='pierna'){
                     return gotoFlow(flowPierna)
