@@ -63,7 +63,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                     }
                     return gotoFlow(flowPrincipal)
                     
-                } else if(valoresPermitidosCalentamiento.includes(ctx.body)){
+                } else if(!valoresPermitidosCalentamiento.includes(ctx.body)){
                     
                     return fallBack();
                 }  
@@ -72,7 +72,9 @@ const flowCalentamiento = addKeyword(['calentamiento'])
 
 
 const flowcardio = addKeyword('cardio')
-.addAnswer()
+.addAnswer(' ',
+        {media: './images/cardio/caminadora.png'}
+        )
 
 
 const valoresPermitidos = ['ya', 'ya acabe', 'ya termine', 'listo', 'termine'];
