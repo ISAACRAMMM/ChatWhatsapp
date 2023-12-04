@@ -214,7 +214,7 @@ const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espal
     .addAnswer('Coloca el aparato de Peck en suposición cerrada inversa para que con poco peso realices 3 series de 20 repeticiones ',
         {media: './images/espalda/aperturas-invertida.png'}
         )
-    .addAnswer('',
+    .addAnswer('Dirígete al banco para realizar remo con polea y haz 4 series de 12 repeticiones',
         {media: './images/espalda/remo-horizontal.png'}
         )
 ///
@@ -245,7 +245,7 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
     .addAnswer('Utiliza un banco plano y una barra con el peso que puedas para realizar puentes. Coloca el peso en tu cadera baja lo más que puedas sin tocar el suelo y sube, realiza 4 series de 12 a 14 repeticiones',
         {media: './images/gluteo/hiptrus.jpeg'}
         )
-    .addAnswer('',
+    .addAnswer('Colócate los grilletes en los tobillos y coloca la polea en una posición baja, engancha un grillete para que realices patadas hacia atrás, realiza 4 series de 15 repeticiones ',
         {media: './images/gluteo/patada-polea.png'}
         )
 ///
@@ -321,13 +321,13 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
                 }  
             })
     .addAnswer('Aquí tienes tu rutina de abdomen')
-    .addAnswer('',
+    .addAnswer('Para comenzar coloca un tapete en el suelo para que realices 3 series de 12 abdominales',
         {media: './images/abdomen/abs.png'}
         )
-        .addAnswer('',
+        .addAnswer('En el mismo lugar acuéstate boca arriba, coloca tus manos en los costados, eleva y baja tus pies 👆 haz 4 series de 10 repeticiones',
         {media: './images/abdomen/elevacion-de-piernas.png'}
         )
-        .addAnswer('',
+        .addAnswer('Ahora ve a la maquina para realizar encogimientos de abdomen y realiza 4 series de 15 repeticiones',
         {media: './images/abdomen/plancha-lateral.png'}
         )
 ///
@@ -346,16 +346,19 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
                 }  
             })
     .addAnswer('Aquí tienes tu rutina de hombro ')
-    .addAnswer('',
+    .addAnswer('Para comenzar con hombros realiza press en maquina 4 series de 14 repeticiones ',
         {media: './images/hombro/press-hombro.png'}
         )
-    .addAnswer('',
+    .addAnswer('O bien puedes realizarlo con mancuernas en un banco sentado 4 series de 14 repeticiones',
         {media: './images/hombro/press-de-hombros-con-mancuernas.png'}
         )
-    .addAnswer('',
+    .addAnswer('Coloca la polea en una posición baja y colocale un maneral para que realices laterales de manera unilateral  esto con bajo peso haz 4 series de 15 a 20 repeticiones ',
         {media: './images/hombro/laterales.png'}
         )
-    .addAnswer('',
+    .addAnswer('Con dos mancuernas de un peso medio colócalos a tus costados y realiza encogimientos de hombros 4 series de 10 a 12 repeticiones',
+        {media: './images/hombro/encogimiento-de-hombros.png'}
+        )
+    .addAnswer('Con una barra o dos mancuernas de bajo elévalas hacia adelante subiendo y bajando así haz 4 series de 12 repeticiones',
         {media: './images/hombro/elevacion-frontal.png'}
         )        
 
@@ -364,10 +367,9 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 //
 
 
-const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina','buenos dias', 'buenas tardes', 'buenas noches'])
+const flowPrincipal = addKeyword(['hola', 'ola','hla','hol','hi','hello','buenas', 'rutina', 'me das una rutina','buenos dias', 'buenas tardes', 'buenas noches'])
     .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
     .addAnswer(['Que vamos a hacer el dia de hoy?',
-        
     '- Pecho',
     '- Espalda',
     '- Pierna',
