@@ -208,7 +208,7 @@ const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espal
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -217,7 +217,7 @@ const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espal
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -226,7 +226,7 @@ const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espal
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -235,7 +235,7 @@ const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espal
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -263,7 +263,7 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -272,7 +272,7 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -281,7 +281,7 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -289,7 +289,7 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
         {media: './images/gluteo/hiptrus.jpeg'}
         ).addAnswer('Dime cuando termines',
         {capture: true,},(ctx,{fallBack})=>{
-            if (!valoresPermitidos.includes(ctx.body)) {
+            if (valoresPermitidos.includes(ctx.body)) {
             return fallBack();
             }          
         })
@@ -317,7 +317,7 @@ const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios 
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -326,7 +326,7 @@ const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios 
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -335,7 +335,7 @@ const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios 
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -363,7 +363,7 @@ const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -372,7 +372,7 @@ const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -380,7 +380,7 @@ const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de
         {media: './images/biceps/martillos.png'}
         ).addAnswer('Dime cuando termines',
         {capture: true,},(ctx,{fallBack})=>{
-            if (!valoresPermitidos.includes(ctx.body)) {
+            if (valoresPermitidos.includes(ctx.body)) {
             return fallBack();
             }          
         })
@@ -417,7 +417,7 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
         {media: './images/abdomen/elevacion-de-piernas.png'}
         ).addAnswer('Dime cuando termines',
         {capture: true,},(ctx,{fallBack})=>{
-            if (!valoresPermitidos.includes(ctx.body)) {
+            if (valoresPermitidos.includes(ctx.body)) {
             return fallBack();
             }          
         })
