@@ -205,15 +205,39 @@ const flowEspalda=addKeyword(['espalda', 'rutina de espalda','ejecicios de espal
     .addAnswer('Empieza con jalón a la cara con la barra larga, en aun agarre abierto realiza 4 series de 12 repeticiones',
         {media: './images/espalda/jalon-cara.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Ya que acabes cambia la barra por el triangulo para que realices 4 series de 15 repeticiones',
         {media: './images/espalda/jalon-cerrado.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('Ya que acabes cambia la barra por el triangulo para que realices 4 series de 15 repeticiones',
         {media: './images/espalda/remo-polea.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Coloca el aparato de Peck en suposición cerrada inversa para que con poco peso realices 3 series de 20 repeticiones ',
         {media: './images/espalda/aperturas-invertida.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Dirígete al banco para realizar remo con polea y haz 4 series de 12 repeticiones',
         {media: './images/espalda/remo-horizontal.png'}
         )
@@ -236,15 +260,38 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
     .addAnswer('El primer ejercicio de tu rutina de glúteo es sentadilla suma, vas a realizar una primera serie de 15 repeticiones sin peso para terminar de calentar.',
         {media: './images/gluteo/sumo-sinPeso.png.jpeg'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Posteriormente con un peso que controles realiza 4 series de 12 a 14 repeticiones',
         {media: './images/gluteo/sumo-peso.jpeg'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Después haz de 16 a 20 desplantes con el peso que puedas',
         {media: './images/gluteo/desplantes.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
     .addAnswer('Utiliza un banco plano y una barra con el peso que puedas para realizar puentes. Coloca el peso en tu cadera baja lo más que puedas sin tocar el suelo y sube, realiza 4 series de 12 a 14 repeticiones',
         {media: './images/gluteo/hiptrus.jpeg'}
-        )
+        ).addAnswer('Dime cuando termines',
+        {capture: true,},(ctx,{fallBack})=>{
+            if (!valoresPermitidos.includes(ctx.body)) {
+            return fallBack();
+            }          
+        })
     .addAnswer('Colócate los grilletes en los tobillos y coloca la polea en una posición baja, engancha un grillete para que realices patadas hacia atrás, realiza 4 series de 15 repeticiones ',
         {media: './images/gluteo/patada-polea.png'}
         )
@@ -267,12 +314,30 @@ const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios 
     .addAnswer('Coloca la polea en la parte superior y utiliza el triángulo, selecciona el peso adecuado para que realices 4 series de 15 repeticiones. Recuerda mantener los codos pegados a los costados',
         {media: './images/triceps/triangulo.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('Cambia el triangulo por un agarre de una mano y realiza 12 repeticiones por cada mano 3 veces ',
         {media: './images/triceps/polea-unamano.jpg'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('En un banco plano utiliza una barra z de un peso bajo realiza un movimiento de antebrazos hasta que la barra casi toque tu frente. Realiza 4 series de 10 repeticiones   ',
         {media: './images/triceps/rompe-craneos.jpg'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('para finalizar dirigete a la maquina de fondos y con un agarre carrado realiza 5 series de 10 a 12 repeticiones',
         {media: './images/triceps/fondos.png'}
         )
@@ -295,12 +360,29 @@ const flowBiceps=addKeyword(['biceps', 'bicep', 'rutina de biceps','ejecicios de
     .addAnswer('Inclina un banco a 30 0 45 grados con una mancuerna en cada mano a cada lado de sus caderas. Debería utilizar un agarre neutro. Contrayendo los bíceps, doble los codos totalmente supinando las manos mientras exhala. Vuelva a la posición inicial con un suave',
         {media: './images/biceps/curl-biceps-tumbado.png]'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('Elige el peso adecuado de una barra z, Contrayendo los bíceps, dobla los codos totalmente como se muestra en la imagen ☝️ así realiza 4 series de 12 repeticiones. Mientras haces el ejercicio, mueve solo la articulación de los codos, asegúrese de no mover ninguna otra parte de tu cuerpo',
         {media: './images/biceps/curl-barra-z.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('Con unas mancuernas realiza martillos. con una mancuerna en cada mano a cada lado de tus caderas. Contrae los bíceps doblando los codos manteniendo el agarre en todo momento. Realiza 4 series de 15 repeticiones',
         {media: './images/biceps/martillos.png'}
-        )
+        ).addAnswer('Dime cuando termines',
+        {capture: true,},(ctx,{fallBack})=>{
+            if (!valoresPermitidos.includes(ctx.body)) {
+            return fallBack();
+            }          
+        })
         .addAnswer('Para finalizar con bíceps dirígete a la maquina predicador realiza 4 series de 12 a 15 repeticiones El pecho y la parte superior de los brazos deben colocarse contra las almohadillas. Sostén las manijas frente a ti con los codos extendidos',
         {media: './images/biceps/curl-de-biceps.png'}
         )
@@ -324,9 +406,20 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
     .addAnswer('Para comenzar coloca un tapete en el suelo para que realices 3 series de 12 abdominales',
         {media: './images/abdomen/abs.png'}
         )
+        .addAnswer('Dime cuando termines',
+            {capture: true,},(ctx,{fallBack})=>{
+                if (!valoresPermitidos.includes(ctx.body)) {
+                return fallBack();
+                }          
+            })
         .addAnswer('En el mismo lugar acuéstate boca arriba, coloca tus manos en los costados, eleva y baja tus pies 👆 haz 4 series de 10 repeticiones',
         {media: './images/abdomen/elevacion-de-piernas.png'}
-        )
+        ).addAnswer('Dime cuando termines',
+        {capture: true,},(ctx,{fallBack})=>{
+            if (!valoresPermitidos.includes(ctx.body)) {
+            return fallBack();
+            }          
+        })
         .addAnswer('Ahora ve a la maquina para realizar encogimientos de abdomen y realiza 4 series de 15 repeticiones',
         {media: './images/abdomen/plancha-lateral.png'}
         )
