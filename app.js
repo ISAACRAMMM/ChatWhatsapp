@@ -86,7 +86,7 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine','si', 'listo', 'termin
                 const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
                 const valoresConfirmacion = [ 'si', 'ya', 'listo'];
 
-                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
+                if (!valoresPermitidosCalentamiento.includes(ctx.body)) {
                     valorCal='pierna'
                     return gotoFlow(flowCalentamiento)
                 }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
