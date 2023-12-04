@@ -86,7 +86,7 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine','si', 'listo', 'termin
                 const valoresPermitidosCalentamiento = [ 'aun no', 'no'];
                 const valoresConfirmacion = [ 'si', 'ya', 'listo'];
 
-                if (!valoresPermitidosCalentamiento.includes(ctx.body)) {
+                if (valoresPermitidosCalentamiento.includes(ctx.body)) {
                     valorCal='pierna'
                     return gotoFlow(flowCalentamiento)
                 }else if(valoresPermitidosCalentamiento.includes(ctx.body)){
@@ -103,7 +103,7 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine','si', 'listo', 'termin
             )
             .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -112,7 +112,7 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine','si', 'listo', 'termin
             )
             .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -124,7 +124,7 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine','si', 'listo', 'termin
             )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -133,7 +133,7 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine','si', 'listo', 'termin
             )
             .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -154,7 +154,7 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -163,7 +163,7 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -172,7 +172,7 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -181,7 +181,7 @@ const flowPecho=addKeyword(['pecho', 'rutina de pecho','ejecicios de pecho','pec
         )
         .addAnswer('Dime cuando termines',
             {capture: true,},(ctx,{fallBack})=>{
-                if (!valoresPermitidos.includes(ctx.body)) {
+                if (valoresPermitidos.includes(ctx.body)) {
                 return fallBack();
                 }          
             })
@@ -242,7 +242,7 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
     .addAnswer('Después haz de 16 a 20 desplantes con el peso que puedas',
         {media: './images/gluteo/desplantes.png'}
         )
-    .addAnswer('',
+    .addAnswer('Utiliza un banco plano y una barra con el peso que puedas para realizar puentes. Coloca el peso en tu cadera baja lo más que puedas sin tocar el suelo y sube, realiza 4 series de 12 a 14 repeticiones',
         {media: './images/gluteo/hiptrus.jpeg'}
         )
     .addAnswer('',
@@ -264,13 +264,13 @@ const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios 
                 }  
             })
     .addAnswer('Aquí tienes tu rutina de triceps')
-    .addAnswer('',
+    .addAnswer('Coloca la polea en la parte superior y utiliza el triángulo, selecciona el peso adecuado para que realices 4 series de 15 repeticiones. Recuerda mantener los codos pegados a los costados',
         {media: './images/triceps/triangulo.png'}
         )
-        .addAnswer('',
+        .addAnswer('Cambia el triangulo por un agarre de una mano y realiza 12 repeticiones por cada mano 3 veces ',
         {media: './images/triceps/polea-unamano.jpg'}
         )
-        .addAnswer('',
+        .addAnswer('En un banco plano utiliza una barra z de un peso bajo realiza un movimiento de antebrazos hasta que la barra casi toque tu frente. Realiza 4 series de 10 repeticiones   ',
         {media: './images/triceps/rompe-craneos.jpg'}
         )
         .addAnswer('para finalizar dirigete a la maquina de fondos y con un agarre carrado realiza 5 series de 10 a 12 repeticiones',
