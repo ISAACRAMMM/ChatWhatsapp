@@ -32,26 +32,13 @@ const flowCalentamiento = addKeyword(['calentamiento'])
         {media: './images/calentamiento/tijeras.png'}
         )
 
-    .addAnswer(['Ya que realices tus calentamientos me recuerdas que vas a entrenar '],
-    null,
-    null, 
-    [
-    flowSecundario,
-    flowPierna,
-    flowEspalda,
-    flowGluteo,
-    flowPecho,
-    flowTriceps,
-    flowBiceps,
-    flowAbdomen, 
-    flowHombro
-]) 
-           // .addAction({capture: false},(ctx,{gotoFlow}) =>{
+    .addAnswer('Ya que realices tus calentamientos me avisas para continuar con tu rutina')
+          /*  .addAction({capture: false},(ctx,{gotoFlow}) =>{
                 
                 
                     
-                  //  return gotoFlow(flowPierna) 
-                  /* }
+                    /*return gotoFlow(flowPierna) 
+                   }
                     if(valorCal=='abs'){
                     return gotoFlow(flowAbdomen)
                     }
@@ -79,7 +66,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                 
                 }  */
             //}
-    
+            
 
 
 
@@ -503,7 +490,7 @@ const flowPrincipal = addKeyword(['hola', 'ola','hla','hol','hi','hello','buenas
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal,flowTerminar,flowCalentamiento])
+    const adapterFlow = createFlow([flowPrincipal,flowTerminar])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
