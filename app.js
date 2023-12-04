@@ -42,7 +42,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
     flowPecho,
     flowTriceps,
     flowBiceps,
-    flowAbdomen,
+    flowAbdomen, flowHombro])
            // .addAction({capture: false},(ctx,{gotoFlow}) =>{
                 
                 
@@ -76,7 +76,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                 
                 }  */
             //}
-    ])
+    
 
 
 
