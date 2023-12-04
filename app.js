@@ -241,9 +241,6 @@ const flowGluteo=addKeyword(['gluteo', 'rutina de gluteo', 'ejercicios de gluteo
         {media: './images/gluteo/desplantes.png'}
         )
     .addAnswer('',
-        {media: './images/gluteo'}
-        )
-    .addAnswer('',
         {media: './images/gluteo/hiptrus.jpeg'}
         )
     .addAnswer('',
@@ -274,8 +271,8 @@ const flowTriceps=addKeyword(['tricep','triceps', 'rutina de tricep','ejecicios 
         .addAnswer('',
         {media: './images/triceps/rompe-craneos.jpg'}
         )
-        .addAnswer('./images/triceps/fondos.png',
-        {media: ''}
+        .addAnswer('para finalizar dirigete a la maquina de fondos y con un agarre carrado realiza 5 series de 10 a 12 repeticiones',
+        {media: './images/triceps/fondos.png'}
         )
 ///
 //      -biceps
@@ -365,7 +362,7 @@ const flowAbdomen=addKeyword(['abdomen', 'abs','rutina de abdomen','ejercicios d
 //
 
 
-const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina',])
+const flowPrincipal = addKeyword(['hola', 'buenas', 'rutina', 'me das una rutina','buenos dias', 'buenas tardes', 'buenas noches'])
     .addAnswer('Bien venido!! Soy tu coach virtual Lucas-35')
     .addAnswer(['Que vamos a hacer el dia de hoy?',
         
