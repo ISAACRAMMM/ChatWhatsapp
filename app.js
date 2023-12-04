@@ -137,9 +137,11 @@ const valoresPermitidos = ['ya', 'ya acabe', 'ya termine','si', 'listo', 'termin
                 return fallBack();
                 }          
             })
-            .addAnswer('Vamos a finalizar con pantorrillas en la maquina costurera 5 series de 15 repeticiones',
+            .addAnswer('Vamos a terminar con pantorrillas en la maquina costurera 5 series de 15 repeticiones',
             {media: './images/pierna/extension-de-gemelos-sentado.png'}
             )
+            .addAnswer(['No te vallas sin hacer tu cardio','Realiza de 15 a 30 min de cardio en la caminadora'],
+            { media: './images/cardio/caminadora.png'})
     
 ///
 //      -pecho
