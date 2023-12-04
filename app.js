@@ -500,7 +500,7 @@ const flowPrincipal = addKeyword(['hola', 'ola','hla','hol','hi','hello','buenas
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal,flowTerminar])
+    const adapterFlow = createFlow([flowPrincipal,flowTerminar,flowCalentamiento])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
