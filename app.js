@@ -32,17 +32,20 @@ const flowCalentamiento = addKeyword(['calentamiento'])
         {media: './images/calentamiento/tijeras.png'}
         )
 
-    .addAnswer('Ya que realices tus calentamientos me recuerdas que vas a entrenar ',
+    .addAnswer(['Ya que realices tus calentamientos me recuerdas que vas a entrenar '],
     null,
     null, 
-    [flowSecundario,
+    [
+    flowSecundario,
     flowPierna,
     flowEspalda,
     flowGluteo,
     flowPecho,
     flowTriceps,
     flowBiceps,
-    flowAbdomen, flowHombro])
+    flowAbdomen, 
+    flowHombro
+])
            // .addAction({capture: false},(ctx,{gotoFlow}) =>{
                 
                 
