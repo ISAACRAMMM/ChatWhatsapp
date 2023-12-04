@@ -16,28 +16,38 @@ let valorCal =''
 //
 const flowCalentamiento = addKeyword(['calentamiento'])
     .addAnswer('cal')
-    .addAnswer(' ',
+    .addAnswer('Lentamente tire de su codo hacia su pecho hasta que sienta el estiramiento en su deltoides. Manten el estiramiento durante 30 segundos realiza 3 series ',
         {media: './images/calentamiento/estiramiento-de-hombro.png'}
         )
-    .addAnswer(' ',
+    .addAnswer('Tira lentamente con la mano de la cabeza hacia la derecha y baja el hombro izquierdo al mismo tiempo. Manten el estiramiento durante 3 repeticiones de 20 segundos por lado  ',
         {media: './images/calentamiento/estiramiento-cuello.png'}
         )
-    .addAnswer(' ',
+    .addAnswer('Tire del dorso de su mano derecha para flexionar su muñeca realiza 4 series de 15 segundos ',
         {media: './images/calentamiento/estiramiento-extensores-muneca.png'}
         )
-    .addAnswer(' ',
+    .addAnswer('  ',
         {media: './images/calentamiento/giros de cadera.png'}
         )
     .addAnswer(' ',
         {media: './images/calentamiento/tijeras.png'}
         )
 
-    .addAnswer('Ya que realices tus calentamientos me avisas para continuar con tu rutina')
-            .addAction({capture: false},(ctx,{gotoFlow}) =>{
+    .addAnswer('Ya que realices tus calentamientos me recuerdas que vas a entrenar ',
+    null,
+    null, 
+    [flowSecundario,
+    flowPierna,
+    flowEspalda,
+    flowGluteo,
+    flowPecho,
+    flowTriceps,
+    flowBiceps,
+    flowAbdomen,
+           // .addAction({capture: false},(ctx,{gotoFlow}) =>{
                 
                 
                     
-                    return gotoFlow(flowPierna) 
+                  //  return gotoFlow(flowPierna) 
                   /* }
                     if(valorCal=='abs'){
                     return gotoFlow(flowAbdomen)
@@ -65,7 +75,8 @@ const flowCalentamiento = addKeyword(['calentamiento'])
                 } else {
                 
                 }  */
-            })
+            //}
+    ])
 
 
 
