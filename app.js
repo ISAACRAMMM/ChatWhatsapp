@@ -30,7 +30,7 @@ const flowCalentamiento = addKeyword(['calentamiento'])
         )
     .addAnswer(' ',
         {media: './images/calentamiento/tijeras.png'}
-        )
+        ) 
 
     .addAnswer('Ya que realices tus calentamientos me avisas para continuar con tu rutina')
           /*  .addAction({capture: false},(ctx,{gotoFlow}) =>{
